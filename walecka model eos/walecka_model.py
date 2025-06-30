@@ -81,12 +81,14 @@ plt.xlabel('n_B  [fm^-3]')
 plt.ylabel('Mean fields  [MeV]')
 plt.legend()
 plt.show()
+plt.savefig('n_B vs mean fields')
 
 plt.plot(nb_list, masses)
 plt.xlabel('n_B  [fm^-3]')
 plt.ylabel('Effective mass  [MeV]')
 plt.title('M* versus density')
 plt.show()
+plt.savefig('M versus density')
 
 
 def energy_density(kf, m_eff, sigma, omega):
@@ -113,17 +115,20 @@ plt.plot(mu_values, eps_list)
 plt.xlabel('mu_B  [MeV]')
 plt.ylabel('Energy density  [MeV/fm^3]')
 plt.show()
+plt.savefig('mu_B vs Energy Density')
 
 plt.plot(mu_values, pres_list)
 plt.xlabel('mu_B  [MeV]')
 plt.ylabel('Pressure  [MeV/fm^3]')
 plt.show()
+plt.savefig('mu_B vs Pressure')
 
 plt.plot(eps_list, pres_list)
 plt.xlabel('Energy density  [MeV/fm^3]')
 plt.ylabel('Pressure  [MeV/fm^3]')
 plt.title('Equation of State')
 plt.show()
+plt.savefig('Energy density vs Pressure')
 
 
 df = pd.DataFrame({
